@@ -1,0 +1,14 @@
+{
+  "name": "track-point",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=7"
+  },
+  "engine-strict": true,
+  "packageManager": "pnpm@7.33.5",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "in": "pnpm install -r"
+  }
+}
