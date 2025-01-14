@@ -24,10 +24,34 @@ pnpm in
 
 ## git提交规范
 
-需要全局安装 `commitizen`
+1. 需要全局安装 `commitizen`
 
 ```bash
 pnpm add -g commitizen
 ```
 
-用 git cz 命令代替 git commit
+2. 切换到自己的分支
+
+```bash
+git checkout dev_xxx
+```
+
+3. 添加文件到暂存区
+
+```bash
+git add .
+```
+
+4. 将暂存区的文件提交到本地仓库
+
+> 用 `git cz` 命令代替 `git commit`，eslint 校验通过后，才能进行后续操作
+
+```bash
+git cz
+```
+
+5. 推送到远程仓库
+
+```bash
+git push origin dev_xxx
+```
