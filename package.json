@@ -1,6 +1,7 @@
 {
   "name": "track-point",
   "version": "1.0.0",
+  "type": "module",
   "engines": {
     "node": ">=18",
     "pnpm": ">=7"
@@ -9,6 +10,24 @@
   "packageManager": "pnpm@7.33.5",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "in": "pnpm install -r"
+    "in": "pnpm install -r",
+    "prepare": "husky",
+    "lint": "node ./scripts/zx-lint.js"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "pnpm lint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-vinyl"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "cz-vinyl": "1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "zx": "^8.3.0"
   }
 }
