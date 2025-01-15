@@ -11,6 +11,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "in": "pnpm install -r",
+    "dev:web": "pnpm -F @track-point/web dev",
+    "build:web": "pnpm -F @track-point/web dev",
     "prepare": "husky",
     "lint": "node ./scripts/zx-lint.js"
   },
